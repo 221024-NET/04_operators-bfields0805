@@ -23,16 +23,75 @@ namespace Operators
             Console.WriteLine("The statement: num1 is not equal to 0, and in fact it is greater than num2 is " + And(num1,num2));
             Console.WriteLine("The statement: num1 is equal to num2, or num1 is less than 0 is " + Or(num1,num2));
         }
-        public static int Increment(int num) { throw new NotImplementedException(); }
-        public static int Decrement(int num) { throw new NotImplementedException(); }
-        public static bool Not(bool input) { throw new NotImplementedException();}
-        public static int Negate(int num){ throw new NotImplementedException();}
-        public static int Sum(int num1, int num2){ throw new NotImplementedException();} 
-        public static int Diff(int num1, int num2){ throw new NotImplementedException();}
-        public static int Product(int num1, int num2){ throw new NotImplementedException();}
-        public static int Quotient(int num1, int num2) { throw new NotImplementedException();}
-        public static int Remainder(int num1, int num2) {throw new NotImplementedException();}
-        public static bool And(int num1, int num2){throw new NotImplementedException();}
-        public static bool Or(int num1, int num2){throw new NotImplementedException();}
+        public static int Increment(int num)
+         { 
+            //throw new NotImplementedException();
+            return ++num;
+         }
+        public static int Decrement(int num)
+         {
+             //throw new NotImplementedException(); 
+             return --num;
+         }
+        public static bool Not(bool input) 
+        { 
+            //throw new NotImplementedException();
+            if(input)
+            {
+                return false;
+            }else
+            {
+              return true;
+            }
+        }
+        public static int Negate(int num)
+        { //throw new NotImplementedException();
+           
+           return num*-1;
+        }
+        public static int Sum(int num1, int num2)
+        { //throw new NotImplementedException();
+           return num1+num2;
+        
+        } 
+        public static int Diff(int num1, int num2)
+        {// throw new NotImplementedException();
+           return num1-num2;
+        }
+        public static int Product(int num1, int num2)
+        { //throw new NotImplementedException();
+
+           return num1*num2;
+        
+        }
+        public static int Quotient(int num1, int num2)
+         { //throw new NotImplementedException();
+            return num1/num2;
+         }
+        public static int Remainder(int num1, int num2)
+         {//throw new NotImplementedException();
+            return num1%num2;
+         
+         }
+        public static bool And(int num1, int num2)
+        {//throw new NotImplementedException();
+            if(num1 !=0  && num1 >num2)
+            {
+                return true;
+            }else
+            {
+                return false;
+            }
+        }
+        public static bool Or(int num1, int num2)
+        {//throw new NotImplementedException();
+            if (num1 < 0 || num1 == num2)
+            {
+                return true;
+            }else
+            {
+                return false;
+            }
+        }
     }
 }
